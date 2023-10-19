@@ -15,7 +15,7 @@
         "bot": "7d08b6630216f0d2",
         "haserroroutput": false,
         "outputs": 1,
-        "x": 1260,
+        "x": 1460,
         "y": 720,
         "wires": [
             [
@@ -34,7 +34,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 970,
+        "x": 1170,
         "y": 700,
         "wires": [
             [
@@ -55,7 +55,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1440,
+        "x": 1640,
         "y": 640,
         "wires": []
     },
@@ -71,8 +71,8 @@
         "y": 440,
         "wires": [
             [
-                "71d8edc267eea810",
-                "293834221ec6b04a"
+                "c6ad5cd5f9fdd575",
+                "84c7470ff5e10660"
             ]
         ]
     },
@@ -85,7 +85,7 @@
         "text": "payload.content",
         "inputtypemessage": "msg",
         "rejectssl": false,
-        "x": 1250,
+        "x": 1450,
         "y": 520,
         "wires": [
             [
@@ -105,35 +105,9 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1400,
+        "x": 1600,
         "y": 420,
         "wires": []
-    },
-    {
-        "id": "9a5b232896d59205",
-        "type": "delay",
-        "z": "c8d801bf08f5869b",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "6",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "6",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 500,
-        "y": 540,
-        "wires": [
-            [
-                "84c7470ff5e10660",
-                "c6ad5cd5f9fdd575"
-            ]
-        ]
     },
     {
         "id": "84c7470ff5e10660",
@@ -164,7 +138,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1220,
+        "x": 1420,
         "y": 640,
         "wires": []
     },
@@ -179,7 +153,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
+        "x": 1180,
         "y": 600,
         "wires": [
             [
@@ -200,7 +174,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1100,
+        "x": 1300,
         "y": 460,
         "wires": []
     },
@@ -209,19 +183,18 @@
         "type": "function",
         "z": "c8d801bf08f5869b",
         "name": "Condicional",
-        "func": "// Valor analogico de A0\nlet A0Value = msg.payload.pot1;\n\n// Se esta reproduciiendo algo en el nodo de audio \n\nif (A0Value > 800 ) {\n    return msg;\n} else {\n    return null;\n}\n",
+        "func": "\n// Valor analogico de A0\nlet A0Value = msg.payload.pot1;\n\n\n// Se esta reproduciiendo algo en el nodo de audio \n\nif (A0Value > 800 ) {\n    return msg;\n} else {\n    return null;\n}\n",
         "outputs": 1,
         "noerr": 0,
-        "initialize": "",
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nglobal.set(\"mensajesEnviados\", 0)",
         "finalize": "",
         "libs": [],
-        "x": 690,
-        "y": 620,
+        "x": 290,
+        "y": 520,
         "wires": [
             [
-                "bd97ebe71adce9e6",
-                "e94f4d8640569b69",
-                "bdaf4f2a8416b3ed"
+                "a54b4419bae90f10",
+                "9a5b232896d59205"
             ]
         ]
     },
@@ -265,7 +238,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "text",
+        "label": "",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -282,14 +255,14 @@
         "type": "function",
         "z": "c8d801bf08f5869b",
         "name": "Formateo mensajes",
-        "func": "msg.payload = \"Peligro!!! Valores peligrosos \" + msg.payload.pot1\nmsg.topic =  \"Peligro!!! Valores peligrosos \" + msg.payload.pot1;\n\nreturn msg;\n\n",
+        "func": "// Valor analogico de A0\nlet A0Value = msg.payload.pot1;\n// Se esta reproduciiendo algo en el nodo de audio \nlet estado = flow.get(\"PlayingAudio\");\nif (A0Value > 800 && estado === false) {\n    msg.payload = \"¡Peligro!, valor fuera de rango\";\n    flow.set(\"PlayingAudio\", true); // El nodo de audio esta ocupado\n    setTimeout(function () { flow.set(\"PlayingAudio\", false); }, 2000);\n    return msg;\n} else {\n    return null;\n}\n\nreturn msg;\n\n",
         "outputs": 1,
         "noerr": 0,
-        "initialize": "",
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nif (flow.get(\"PlayingAudio\") === undefined) {\n    flow.set(\"PlayingAudio\", false);\n}",
         "finalize": "",
         "libs": [],
-        "x": 380,
-        "y": 640,
+        "x": 420,
+        "y": 660,
         "wires": [
             [
                 "1587b1c7386a90ea"
@@ -336,7 +309,7 @@
         "tls": true,
         "name": "ve502295@uaeh.edu.mx",
         "dname": "",
-        "x": 1250,
+        "x": 1450,
         "y": 820,
         "wires": []
     },
@@ -351,36 +324,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 960,
+        "x": 1160,
         "y": 780,
         "wires": [
             [
                 "d252ecf920bf1b98"
-            ]
-        ]
-    },
-    {
-        "id": "293834221ec6b04a",
-        "type": "delay",
-        "z": "c8d801bf08f5869b",
-        "name": "",
-        "pauseType": "rate",
-        "timeout": "5",
-        "timeoutUnits": "seconds",
-        "rate": "4",
-        "nbRateUnits": "1",
-        "rateUnits": "minute",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "allowrate": false,
-        "outputs": 1,
-        "x": 310,
-        "y": 500,
-        "wires": [
-            [
-                "9a5b232896d59205"
             ]
         ]
     },
@@ -438,22 +386,139 @@
         ]
     },
     {
-        "id": "71d8edc267eea810",
+        "id": "9a5b232896d59205",
+        "type": "delay",
+        "z": "c8d801bf08f5869b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "6",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "6",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 560,
+        "y": 480,
+        "wires": [
+            [
+                "6645863fb70245d6"
+            ]
+        ]
+    },
+    {
+        "id": "6645863fb70245d6",
+        "type": "switch",
+        "z": "c8d801bf08f5869b",
+        "name": "Verificar si ya se enviaron 4 mensajes",
+        "property": "mensajesEnviados",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "4",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 850,
+        "y": 480,
+        "wires": [
+            [
+                "bd97ebe71adce9e6",
+                "e94f4d8640569b69",
+                "bdaf4f2a8416b3ed",
+                "2860b535e4aeb606"
+            ],
+            [
+                "2db51a460572ac4a"
+            ]
+        ]
+    },
+    {
+        "id": "aa36da29237b9a88",
         "type": "function",
         "z": "c8d801bf08f5869b",
-        "name": "Condicional",
-        "func": "// Valor analogico de A0\nlet A0Value = msg.payload.pot1;\n\n// Se esta reproduciiendo algo en el nodo de audio \n\nif (A0Value > 800) {\n    return msg;\n} else {\n    return null;\n}\n",
+        "name": "Resetear conteo de mensajes",
+        "func": "global.set(\"mensajesEnviados\", 0);\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nglobal.set(\"mensajesEnviados\", 0)",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2db51a460572ac4a",
+        "type": "delay",
+        "z": "c8d801bf08f5869b",
+        "name": "Esperar 1 minuto",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "minutes",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 670,
+        "y": 580,
+        "wires": [
+            [
+                "aa36da29237b9a88"
+            ]
+        ]
+    },
+    {
+        "id": "a2d030befc69bc70",
+        "type": "debug",
+        "z": "c8d801bf08f5869b",
+        "name": "debug 30",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2860b535e4aeb606",
+        "type": "function",
+        "z": "c8d801bf08f5869b",
+        "name": "function 6",
+        "func": "var cantidad = global.get('mensajesEnviados');\ncantidad++;\nglobal.set('mensajesEnviados', cantidad);",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 190,
-        "y": 640,
+        "x": 980,
+        "y": 460,
         "wires": [
-            [
-                "a54b4419bae90f10"
-            ]
+            []
         ]
     },
     {
