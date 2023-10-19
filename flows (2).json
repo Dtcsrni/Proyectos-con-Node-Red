@@ -1,0 +1,565 @@
+[
+    {
+        "id": "c8d801bf08f5869b",
+        "type": "tab",
+        "label": "Ejercicio 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "98220ae127761f87",
+        "type": "telegram sender",
+        "z": "c8d801bf08f5869b",
+        "name": "Enviarmensaje",
+        "bot": "7d08b6630216f0d2",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1260,
+        "y": 720,
+        "wires": [
+            [
+                "6bfd9d625c08730b"
+            ]
+        ]
+    },
+    {
+        "id": "e94f4d8640569b69",
+        "type": "function",
+        "z": "c8d801bf08f5869b",
+        "name": "Formateo telegram",
+        "func": "\nmsg.payload = {\n    \"chatId\": 6228042368,\n    \"type\": \"message\",\n    \"content\": \"Peligro!!! Valores mayores a 600 Valor:\" + msg.payload.pot1 + \"\"\n}\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 700,
+        "wires": [
+            [
+                "98220ae127761f87",
+                "dfcc15fc9ba9f8fb"
+            ]
+        ]
+    },
+    {
+        "id": "6bfd9d625c08730b",
+        "type": "debug",
+        "z": "c8d801bf08f5869b",
+        "name": "debug 25",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1440,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "d35d4db4d697b29d",
+        "type": "json",
+        "z": "c8d801bf08f5869b",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 110,
+        "y": 440,
+        "wires": [
+            [
+                "71d8edc267eea810",
+                "293834221ec6b04a"
+            ]
+        ]
+    },
+    {
+        "id": "41266a586df70fcc",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "c8d801bf08f5869b",
+        "name": "WatsAppBot",
+        "account": "452984d4cbdd47d7",
+        "text": "payload.content",
+        "inputtypemessage": "msg",
+        "rejectssl": false,
+        "x": 1250,
+        "y": 520,
+        "wires": [
+            [
+                "800435b09347fadd"
+            ]
+        ]
+    },
+    {
+        "id": "800435b09347fadd",
+        "type": "debug",
+        "z": "c8d801bf08f5869b",
+        "name": "debug 26",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1400,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "9a5b232896d59205",
+        "type": "delay",
+        "z": "c8d801bf08f5869b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "6",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "6",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 500,
+        "y": 540,
+        "wires": [
+            [
+                "84c7470ff5e10660",
+                "c6ad5cd5f9fdd575"
+            ]
+        ]
+    },
+    {
+        "id": "84c7470ff5e10660",
+        "type": "debug",
+        "z": "c8d801bf08f5869b",
+        "name": "debug 27",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "dfcc15fc9ba9f8fb",
+        "type": "debug",
+        "z": "c8d801bf08f5869b",
+        "name": "debug 28",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "bd97ebe71adce9e6",
+        "type": "function",
+        "z": "c8d801bf08f5869b",
+        "name": "Formateo whatsapp",
+        "func": "\nmsg.payload = {\n    \"content\": \"Peligro!!! Valores mayores a 600 Valor: \" + msg.payload.pot1\n}\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 600,
+        "wires": [
+            [
+                "41266a586df70fcc",
+                "f03129af05b666f0"
+            ]
+        ]
+    },
+    {
+        "id": "f03129af05b666f0",
+        "type": "debug",
+        "z": "c8d801bf08f5869b",
+        "name": "debug 29",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "c6ad5cd5f9fdd575",
+        "type": "function",
+        "z": "c8d801bf08f5869b",
+        "name": "Condicional",
+        "func": "// Valor analogico de A0\nlet A0Value = msg.payload.pot1;\n\n// Se esta reproduciiendo algo en el nodo de audio \n\nif (A0Value > 800 ) {\n    return msg;\n} else {\n    return null;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 620,
+        "wires": [
+            [
+                "bd97ebe71adce9e6",
+                "e94f4d8640569b69",
+                "bdaf4f2a8416b3ed"
+            ]
+        ]
+    },
+    {
+        "id": "871150bf3d21fb25",
+        "type": "ui_audio",
+        "z": "c8d801bf08f5869b",
+        "name": "",
+        "group": "34fa86bcf389f3b9",
+        "voice": "Microsoft Sabina - Spanish (Mexico)",
+        "always": true,
+        "x": 720,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "4823bc269d8b2e04",
+        "type": "ui_toast",
+        "z": "c8d801bf08f5869b",
+        "position": "top right",
+        "displayTime": "8",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 750,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "88478539255e41fc",
+        "type": "ui_text",
+        "z": "c8d801bf08f5869b",
+        "group": "d06eb2c6464ac712",
+        "order": 22,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 710,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "a54b4419bae90f10",
+        "type": "function",
+        "z": "c8d801bf08f5869b",
+        "name": "Formateo mensajes",
+        "func": "msg.payload = \"Peligro!!! Valores peligrosos \" + msg.payload.pot1\nmsg.topic =  \"Peligro!!! Valores peligrosos \" + msg.payload.pot1;\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 640,
+        "wires": [
+            [
+                "1587b1c7386a90ea"
+            ]
+        ]
+    },
+    {
+        "id": "1587b1c7386a90ea",
+        "type": "delay",
+        "z": "c8d801bf08f5869b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "2",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 540,
+        "y": 760,
+        "wires": [
+            [
+                "88478539255e41fc",
+                "871150bf3d21fb25",
+                "4823bc269d8b2e04"
+            ]
+        ]
+    },
+    {
+        "id": "d252ecf920bf1b98",
+        "type": "e-mail",
+        "z": "c8d801bf08f5869b",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "ve502295@uaeh.edu.mx",
+        "dname": "",
+        "x": 1250,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "bdaf4f2a8416b3ed",
+        "type": "function",
+        "z": "c8d801bf08f5869b",
+        "name": "Formateo correo",
+        "func": "\nmsg.payload = \"Hola Mundo NODE - RED\";\nmsg.topic = \"Asunto de prueba\";\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 780,
+        "wires": [
+            [
+                "d252ecf920bf1b98"
+            ]
+        ]
+    },
+    {
+        "id": "293834221ec6b04a",
+        "type": "delay",
+        "z": "c8d801bf08f5869b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "4",
+        "nbRateUnits": "1",
+        "rateUnits": "minute",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 500,
+        "wires": [
+            [
+                "9a5b232896d59205"
+            ]
+        ]
+    },
+    {
+        "id": "2164ddc7099e6c82",
+        "type": "serial in",
+        "z": "c8d801bf08f5869b",
+        "name": "",
+        "serial": "b1c65f463b3fbf0e",
+        "x": 130,
+        "y": 940,
+        "wires": [
+            [
+                "fc25d5dd15267e59"
+            ]
+        ]
+    },
+    {
+        "id": "fc25d5dd15267e59",
+        "type": "mqtt out",
+        "z": "c8d801bf08f5869b",
+        "name": "LecturasAnalogicas",
+        "topic": "uaeh/erick/redes",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6582f323d6ac2cd4",
+        "x": 350,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "902582da61a631d2",
+        "type": "mqtt in",
+        "z": "c8d801bf08f5869b",
+        "name": "Recibir Analogicos y Botones",
+        "topic": "uaeh/erick/redes",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "6582f323d6ac2cd4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "d35d4db4d697b29d"
+            ]
+        ]
+    },
+    {
+        "id": "71d8edc267eea810",
+        "type": "function",
+        "z": "c8d801bf08f5869b",
+        "name": "Condicional",
+        "func": "// Valor analogico de A0\nlet A0Value = msg.payload.pot1;\n\n// Se esta reproduciiendo algo en el nodo de audio \n\nif (A0Value > 800) {\n    return msg;\n} else {\n    return null;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 640,
+        "wires": [
+            [
+                "a54b4419bae90f10"
+            ]
+        ]
+    },
+    {
+        "id": "7d08b6630216f0d2",
+        "type": "telegram bot",
+        "botname": "ErickVBot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "452984d4cbdd47d7",
+        "type": "node-red-contrib-whatsapp-cmb-account",
+        "name": "Erick"
+    },
+    {
+        "id": "34fa86bcf389f3b9",
+        "type": "ui_group",
+        "name": "Alertas",
+        "tab": "d3fc2d27d754c467",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d06eb2c6464ac712",
+        "type": "ui_group",
+        "name": "Salidas Digitales",
+        "tab": "d3fc2d27d754c467",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b1c65f463b3fbf0e",
+        "type": "serial-port",
+        "serialport": "COM10",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "6582f323d6ac2cd4",
+        "type": "mqtt-broker",
+        "name": "Hive",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "ErickNR",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d3fc2d27d754c467",
+        "type": "ui_tab",
+        "name": "2023 UAEH Ago-Dic Redes",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
