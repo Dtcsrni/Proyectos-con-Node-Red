@@ -75,36 +75,74 @@
         "id": "c8d801bf08f5869b",
         "type": "tab",
         "label": "Ejercicio 2",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e0db045ba8844b5f",
+        "type": "tab",
+        "label": "Pruebas IoTStack",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "b1c65f463b3fbf0e",
-        "type": "serial-port",
-        "serialport": "COM4",
-        "serialbaud": "9600",
-        "databits": "8",
-        "parity": "none",
-        "stopbits": "1",
-        "waitfor": "",
-        "dtr": "none",
-        "rts": "none",
-        "cts": "none",
-        "dsr": "none",
-        "newline": "\\n",
-        "bin": "false",
-        "out": "char",
-        "addchar": "",
-        "responsetimeout": "10000"
+        "id": "6582f323d6ac2cd4",
+        "type": "mqtt-broker",
+        "name": "Hive",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "eirikr",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "600",
+        "cleansession": false,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
     },
     {
-        "id": "d3fc2d27d754c467",
-        "type": "ui_tab",
-        "name": "2023 UAEH Ago-Dic Redes",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
+        "id": "7d08b6630216f0d2",
+        "type": "telegram bot",
+        "botname": "ErickVBot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "452984d4cbdd47d7",
+        "type": "node-red-contrib-whatsapp-cmb-account",
+        "name": "Erick"
     },
     {
         "id": "f282ca4df016ec69",
@@ -205,6 +243,14 @@
         }
     },
     {
+        "id": "d3fc2d27d754c467",
+        "type": "ui_tab",
+        "name": "2023 UAEH Ago-Dic Redes",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
         "id": "d06eb2c6464ac712",
         "type": "ui_group",
         "name": "Salidas Digitales",
@@ -238,33 +284,6 @@
         "className": ""
     },
     {
-        "id": "6582f323d6ac2cd4",
-        "type": "mqtt-broker",
-        "name": "Hive",
-        "broker": "broker.hivemq.com",
-        "port": "1883",
-        "clientid": "eirikr",
-        "autoConnect": true,
-        "usetls": false,
-        "protocolVersion": "5",
-        "keepalive": "600",
-        "cleansession": false,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "birthMsg": {},
-        "closeTopic": "",
-        "closeQos": "0",
-        "closePayload": "",
-        "closeMsg": {},
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": "",
-        "willMsg": {},
-        "userProps": "",
-        "sessionExpiry": ""
-    },
-    {
         "id": "34fa86bcf389f3b9",
         "type": "ui_group",
         "name": "Alertas",
@@ -276,34 +295,84 @@
         "className": ""
     },
     {
-        "id": "7d08b6630216f0d2",
-        "type": "telegram bot",
-        "botname": "ErickVBot",
-        "usernames": "",
-        "chatids": "",
-        "baseapiurl": "",
-        "updatemode": "polling",
-        "pollinterval": "300",
-        "usesocks": false,
-        "sockshost": "",
-        "socksprotocol": "socks5",
-        "socksport": "6667",
-        "socksusername": "anonymous",
-        "sockspassword": "",
-        "bothost": "",
-        "botpath": "",
-        "localbotport": "8443",
-        "publicbotport": "8443",
-        "privatekey": "",
-        "certificate": "",
-        "useselfsignedcertificate": false,
-        "sslterminated": false,
-        "verboselogging": false
+        "id": "b1c65f463b3fbf0e",
+        "type": "serial-port",
+        "serialport": "COM4",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
     },
     {
-        "id": "452984d4cbdd47d7",
-        "type": "node-red-contrib-whatsapp-cmb-account",
-        "name": "Erick"
+        "id": "365ee1b609f34aa6",
+        "type": "ui_tab",
+        "name": "Introducción al IoT",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c17cdc3e74e0ccc3",
+        "type": "ui_spacer",
+        "z": "e0db045ba8844b5f",
+        "name": "spacer",
+        "group": "54414b5d4a8044fb",
+        "order": 1,
+        "width": "3",
+        "height": "1"
+    },
+    {
+        "id": "47e551da2c183446",
+        "type": "ui_spacer",
+        "z": "e0db045ba8844b5f",
+        "name": "spacer",
+        "group": "54414b5d4a8044fb",
+        "order": 2,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "50df35a81bc8c4d1",
+        "type": "ui_spacer",
+        "z": "e0db045ba8844b5f",
+        "name": "spacer",
+        "group": "54414b5d4a8044fb",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "1b9851c273eca0cf",
+        "type": "ui_group",
+        "name": "LED y RELE",
+        "tab": "365ee1b609f34aa6",
+        "order": 3,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "78ac2354e82ef46b",
+        "type": "ui_group",
+        "name": "Servomotor",
+        "tab": "365ee1b609f34aa6",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "eaf2df4aed6a835a",
@@ -369,16 +438,6 @@
         ]
     },
     {
-        "id": "1c0977c462319d46",
-        "type": "serial out",
-        "z": "944b274dd84430d3",
-        "name": "Arduino Uno",
-        "serial": "b1c65f463b3fbf0e",
-        "x": 470,
-        "y": 260,
-        "wires": []
-    },
-    {
         "id": "180d46d50719f95b",
         "type": "inject",
         "z": "944b274dd84430d3",
@@ -409,6 +468,16 @@
         ]
     },
     {
+        "id": "1c0977c462319d46",
+        "type": "serial out",
+        "z": "944b274dd84430d3",
+        "name": "Arduino Uno",
+        "serial": "b1c65f463b3fbf0e",
+        "x": 470,
+        "y": 260,
+        "wires": []
+    },
+    {
         "id": "36a237cf0a22aa1d",
         "type": "debug",
         "z": "2097e67294f80199",
@@ -423,16 +492,6 @@
         "statusType": "auto",
         "x": 470,
         "y": 200,
-        "wires": []
-    },
-    {
-        "id": "2019eb999c24e0cd",
-        "type": "serial out",
-        "z": "2097e67294f80199",
-        "name": "Arduino Uno",
-        "serial": "b1c65f463b3fbf0e",
-        "x": 470,
-        "y": 280,
         "wires": []
     },
     {
@@ -681,6 +740,16 @@
         ]
     },
     {
+        "id": "2019eb999c24e0cd",
+        "type": "serial out",
+        "z": "2097e67294f80199",
+        "name": "Arduino Uno",
+        "serial": "b1c65f463b3fbf0e",
+        "x": 470,
+        "y": 280,
+        "wires": []
+    },
+    {
         "id": "44e2716d8a52654d",
         "type": "debug",
         "z": "270ea962b8fd5020",
@@ -766,104 +835,6 @@
         "wires": []
     },
     {
-        "id": "0a255fac73fb70fc",
-        "type": "ui_gauge",
-        "z": "270ea962b8fd5020",
-        "name": "Manometro 2",
-        "group": "f00ef377b0ef7584",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Manometro 2",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "1000",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "400",
-        "seg2": "700",
-        "diff": false,
-        "className": "",
-        "x": 1050,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "15152b9f5a92408e",
-        "type": "ui_gauge",
-        "z": "270ea962b8fd5020",
-        "name": "Manometro 1",
-        "group": "f00ef377b0ef7584",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Manometro 1",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "1000",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "400",
-        "seg2": "700",
-        "diff": false,
-        "className": "",
-        "x": 1050,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "bcadc8f00fd0a868",
-        "type": "ui_text",
-        "z": "270ea962b8fd5020",
-        "group": "2a57da97763dc503",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Pulsador 2",
-        "label": "Pulsador 2",
-        "format": "{{value}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1050,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "934b86b90cf0a9fd",
-        "type": "ui_text",
-        "z": "270ea962b8fd5020",
-        "group": "2a57da97763dc503",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "Pulsador 1",
-        "label": "Pulsador 1",
-        "format": "{{value}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1070,
-        "y": 260,
-        "wires": []
-    },
-    {
         "id": "868206a6f93dea61",
         "type": "mqtt in",
         "z": "270ea962b8fd5020",
@@ -901,6 +872,144 @@
         "broker": "6582f323d6ac2cd4",
         "x": 510,
         "y": 560,
+        "wires": []
+    },
+    {
+        "id": "56dc59dc7e06decb",
+        "type": "debug",
+        "z": "270ea962b8fd5020",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "a3a7e8c51119fcce",
+        "type": "mqtt out",
+        "z": "270ea962b8fd5020",
+        "name": "Enviar Lecturas Analogicas en JSON por MQTT",
+        "topic": "uaeh/raziel/b_p",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6582f323d6ac2cd4",
+        "x": 580,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "045d793612e29bd8",
+        "type": "function",
+        "z": "270ea962b8fd5020",
+        "name": "DescomponerJSON",
+        "func": "let boton1 = {payload: msg.payload.btn1}\nlet boton2 = { payload: msg.payload.btn2 }\nlet pot1 = { payload: msg.payload.pot1 }\nlet pot2 = { payload: msg.payload.pot2 }\nreturn [boton1, boton2, pot1, pot2];",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 340,
+        "wires": [
+            [
+                "934b86b90cf0a9fd",
+                "b6f6153ad8e144fc"
+            ],
+            [
+                "bcadc8f00fd0a868",
+                "60dc795be9f17924"
+            ],
+            [
+                "0c3bc53bbbb6c6ea",
+                "15152b9f5a92408e"
+            ],
+            [
+                "84f985c2201d7ae0",
+                "0a255fac73fb70fc"
+            ]
+        ]
+    },
+    {
+        "id": "90405444ca9f32b8",
+        "type": "json",
+        "z": "270ea962b8fd5020",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 590,
+        "y": 340,
+        "wires": [
+            [
+                "045d793612e29bd8",
+                "44e2716d8a52654d"
+            ]
+        ]
+    },
+    {
+        "id": "81395d7d3ae7b60f",
+        "type": "mqtt in",
+        "z": "270ea962b8fd5020",
+        "name": "Recibir Estado de Leds",
+        "topic": "uaeh/erick/leds",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "6582f323d6ac2cd4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 480,
+        "y": 440,
+        "wires": [
+            [
+                "c3e45f4feae13fca",
+                "13f0588b6f59717f"
+            ]
+        ]
+    },
+    {
+        "id": "13f0588b6f59717f",
+        "type": "debug",
+        "z": "270ea962b8fd5020",
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "251d2967bb055eea",
+        "type": "debug",
+        "z": "270ea962b8fd5020",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 200,
         "wires": []
     },
     {
@@ -1142,13 +1251,101 @@
         ]
     },
     {
-        "id": "c3e45f4feae13fca",
-        "type": "serial out",
+        "id": "bcadc8f00fd0a868",
+        "type": "ui_text",
         "z": "270ea962b8fd5020",
-        "name": "Recibir y ejecutar comandos LED",
-        "serial": "b1c65f463b3fbf0e",
-        "x": 760,
-        "y": 440,
+        "group": "2a57da97763dc503",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Pulsador 2",
+        "label": "Pulsador 2",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1050,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "934b86b90cf0a9fd",
+        "type": "ui_text",
+        "z": "270ea962b8fd5020",
+        "group": "2a57da97763dc503",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Pulsador 1",
+        "label": "Pulsador 1",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1070,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "0a255fac73fb70fc",
+        "type": "ui_gauge",
+        "z": "270ea962b8fd5020",
+        "name": "Manometro 2",
+        "group": "f00ef377b0ef7584",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Manometro 2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "400",
+        "seg2": "700",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "15152b9f5a92408e",
+        "type": "ui_gauge",
+        "z": "270ea962b8fd5020",
+        "name": "Manometro 1",
+        "group": "f00ef377b0ef7584",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Manometro 1",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "400",
+        "seg2": "700",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 480,
         "wires": []
     },
     {
@@ -1167,141 +1364,13 @@
         ]
     },
     {
-        "id": "56dc59dc7e06decb",
-        "type": "debug",
+        "id": "c3e45f4feae13fca",
+        "type": "serial out",
         "z": "270ea962b8fd5020",
-        "name": "debug 12",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "a3a7e8c51119fcce",
-        "type": "mqtt out",
-        "z": "270ea962b8fd5020",
-        "name": "Enviar Lecturas Analogicas en JSON por MQTT",
-        "topic": "uaeh/raziel/b_p",
-        "qos": "2",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "6582f323d6ac2cd4",
-        "x": 580,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "045d793612e29bd8",
-        "type": "function",
-        "z": "270ea962b8fd5020",
-        "name": "DescomponerJSON",
-        "func": "let boton1 = {payload: msg.payload.btn1}\nlet boton2 = { payload: msg.payload.btn2 }\nlet pot1 = { payload: msg.payload.pot1 }\nlet pot2 = { payload: msg.payload.pot2 }\nreturn [boton1, boton2, pot1, pot2];",
-        "outputs": 4,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 820,
-        "y": 340,
-        "wires": [
-            [
-                "934b86b90cf0a9fd",
-                "b6f6153ad8e144fc"
-            ],
-            [
-                "bcadc8f00fd0a868",
-                "60dc795be9f17924"
-            ],
-            [
-                "0c3bc53bbbb6c6ea",
-                "15152b9f5a92408e"
-            ],
-            [
-                "84f985c2201d7ae0",
-                "0a255fac73fb70fc"
-            ]
-        ]
-    },
-    {
-        "id": "90405444ca9f32b8",
-        "type": "json",
-        "z": "270ea962b8fd5020",
-        "name": "",
-        "property": "payload",
-        "action": "obj",
-        "pretty": false,
-        "x": 590,
-        "y": 340,
-        "wires": [
-            [
-                "045d793612e29bd8",
-                "44e2716d8a52654d"
-            ]
-        ]
-    },
-    {
-        "id": "81395d7d3ae7b60f",
-        "type": "mqtt in",
-        "z": "270ea962b8fd5020",
-        "name": "Recibir Estado de Leds",
-        "topic": "uaeh/erick/leds",
-        "qos": "2",
-        "datatype": "utf8",
-        "broker": "6582f323d6ac2cd4",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 480,
+        "name": "Recibir y ejecutar comandos LED",
+        "serial": "b1c65f463b3fbf0e",
+        "x": 760,
         "y": 440,
-        "wires": [
-            [
-                "c3e45f4feae13fca",
-                "13f0588b6f59717f"
-            ]
-        ]
-    },
-    {
-        "id": "13f0588b6f59717f",
-        "type": "debug",
-        "z": "270ea962b8fd5020",
-        "name": "debug 13",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 520,
-        "wires": []
-    },
-    {
-        "id": "251d2967bb055eea",
-        "type": "debug",
-        "z": "270ea962b8fd5020",
-        "name": "debug 14",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 500,
-        "y": 200,
         "wires": []
     },
     {
@@ -1421,18 +1490,6 @@
         ]
     },
     {
-        "id": "6c57e732cc8cde41",
-        "type": "ui_audio",
-        "z": "1fb5c00a22fe4fc8",
-        "name": "",
-        "group": "34fa86bcf389f3b9",
-        "voice": "Microsoft Sabina - Spanish (Mexico)",
-        "always": true,
-        "x": 460,
-        "y": 200,
-        "wires": []
-    },
-    {
         "id": "e83372c2aba51f08",
         "type": "debug",
         "z": "1fb5c00a22fe4fc8",
@@ -1447,25 +1504,6 @@
         "statusType": "auto",
         "x": 460,
         "y": 100,
-        "wires": []
-    },
-    {
-        "id": "c65d7ea0c1f44361",
-        "type": "ui_toast",
-        "z": "1fb5c00a22fe4fc8",
-        "position": "top right",
-        "displayTime": "8",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 470,
-        "y": 280,
         "wires": []
     },
     {
@@ -1533,6 +1571,44 @@
         ]
     },
     {
+        "id": "cb10ed9a6f9d62af",
+        "type": "function",
+        "z": "1fb5c00a22fe4fc8",
+        "name": "function 5",
+        "func": "let A0Value = msg.payload;\nmsg.payload = A0Value.toString();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 260,
+        "wires": [
+            [
+                "e83372c2aba51f08",
+                "6c57e732cc8cde41",
+                "c65d7ea0c1f44361",
+                "ac43bf53fadfae7e"
+            ]
+        ]
+    },
+    {
+        "id": "80a017c85c1a1866",
+        "type": "debug",
+        "z": "1fb5c00a22fe4fc8",
+        "name": "debug 19",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 660,
+        "wires": []
+    },
+    {
         "id": "3b8a7fa364f12555",
         "type": "ui_slider",
         "z": "1fb5c00a22fe4fc8",
@@ -1560,28 +1636,6 @@
         ]
     },
     {
-        "id": "cb10ed9a6f9d62af",
-        "type": "function",
-        "z": "1fb5c00a22fe4fc8",
-        "name": "function 5",
-        "func": "let A0Value = msg.payload;\nmsg.payload = A0Value.toString();\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 220,
-        "y": 260,
-        "wires": [
-            [
-                "e83372c2aba51f08",
-                "6c57e732cc8cde41",
-                "c65d7ea0c1f44361",
-                "ac43bf53fadfae7e"
-            ]
-        ]
-    },
-    {
         "id": "ac43bf53fadfae7e",
         "type": "ui_text",
         "z": "1fb5c00a22fe4fc8",
@@ -1603,34 +1657,35 @@
         "wires": []
     },
     {
-        "id": "80a017c85c1a1866",
-        "type": "debug",
+        "id": "6c57e732cc8cde41",
+        "type": "ui_audio",
         "z": "1fb5c00a22fe4fc8",
-        "name": "debug 19",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 340,
-        "y": 660,
+        "name": "",
+        "group": "34fa86bcf389f3b9",
+        "voice": "Microsoft Sabina - Spanish (Mexico)",
+        "always": true,
+        "x": 460,
+        "y": 200,
         "wires": []
     },
     {
-        "id": "e6280fb60e4988aa",
-        "type": "telegram sender",
-        "z": "45602e30d6a6099f",
-        "name": "Enviarmensaje",
-        "bot": "7d08b6630216f0d2",
-        "haserroroutput": false,
-        "outputs": 1,
-        "x": 1140,
-        "y": 440,
-        "wires": [
-            []
-        ]
+        "id": "c65d7ea0c1f44361",
+        "type": "ui_toast",
+        "z": "1fb5c00a22fe4fc8",
+        "position": "top right",
+        "displayTime": "8",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 470,
+        "y": 280,
+        "wires": []
     },
     {
         "id": "65fbba4a0d6bd9c0",
@@ -1656,23 +1711,6 @@
         "x": 270,
         "y": 340,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "64054b110dd0812f",
-        "type": "telegram receiver",
-        "z": "45602e30d6a6099f",
-        "name": "RecibirDatos",
-        "bot": "7d08b6630216f0d2",
-        "saveDataDir": "",
-        "filterCommands": false,
-        "x": 250,
-        "y": 220,
-        "wires": [
-            [
-                "43ccbb531c40c61a"
-            ],
             []
         ]
     },
@@ -1761,20 +1799,34 @@
         "wires": []
     },
     {
-        "id": "d26b29e78d7fc8e8",
-        "type": "node-red-contrib-whatsapp-cmb-send-message",
-        "z": "abe9ec12a374fd09",
-        "name": "WatsAppBot",
-        "account": "452984d4cbdd47d7",
-        "text": "payload.content",
-        "inputtypemessage": "msg",
-        "rejectssl": false,
-        "x": 710,
-        "y": 260,
+        "id": "64054b110dd0812f",
+        "type": "telegram receiver",
+        "z": "45602e30d6a6099f",
+        "name": "RecibirDatos",
+        "bot": "7d08b6630216f0d2",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "x": 250,
+        "y": 220,
         "wires": [
             [
-                "c8b4417becca617f"
-            ]
+                "43ccbb531c40c61a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e6280fb60e4988aa",
+        "type": "telegram sender",
+        "z": "45602e30d6a6099f",
+        "name": "Enviarmensaje",
+        "bot": "7d08b6630216f0d2",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1140,
+        "y": 440,
+        "wires": [
+            []
         ]
     },
     {
@@ -1873,6 +1925,23 @@
         ]
     },
     {
+        "id": "d26b29e78d7fc8e8",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "abe9ec12a374fd09",
+        "name": "WatsAppBot",
+        "account": "452984d4cbdd47d7",
+        "text": "payload.content",
+        "inputtypemessage": "msg",
+        "rejectssl": false,
+        "x": 710,
+        "y": 260,
+        "wires": [
+            [
+                "c8b4417becca617f"
+            ]
+        ]
+    },
+    {
         "id": "466983f7aaddfd72",
         "type": "debug",
         "z": "1dad0a92ae89740c",
@@ -1955,104 +2024,6 @@
         "wires": []
     },
     {
-        "id": "a2a9cdea22dd9f00",
-        "type": "ui_gauge",
-        "z": "1dad0a92ae89740c",
-        "name": "Manometro 2",
-        "group": "f00ef377b0ef7584",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Manometro 2",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "1000",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "400",
-        "seg2": "700",
-        "diff": false,
-        "className": "",
-        "x": 1050,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "d2f2404ee1a5474c",
-        "type": "ui_gauge",
-        "z": "1dad0a92ae89740c",
-        "name": "Manometro 1",
-        "group": "f00ef377b0ef7584",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Manometro 1",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "1000",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "400",
-        "seg2": "700",
-        "diff": false,
-        "className": "",
-        "x": 1050,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "5cfd5bf68f588c9d",
-        "type": "ui_text",
-        "z": "1dad0a92ae89740c",
-        "group": "2a57da97763dc503",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Pulsador 2",
-        "label": "Pulsador 2",
-        "format": "{{value}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1050,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "03f6839d2f0d790e",
-        "type": "ui_text",
-        "z": "1dad0a92ae89740c",
-        "group": "2a57da97763dc503",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "Pulsador 1",
-        "label": "Pulsador 1",
-        "format": "{{value}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 1070,
-        "y": 260,
-        "wires": []
-    },
-    {
         "id": "b0eab66163f4d65f",
         "type": "mqtt in",
         "z": "1dad0a92ae89740c",
@@ -2091,6 +2062,72 @@
         "x": 390,
         "y": 560,
         "wires": []
+    },
+    {
+        "id": "d0b6490bbd8cc46d",
+        "type": "debug",
+        "z": "1dad0a92ae89740c",
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "752c2bd02398a5b1",
+        "type": "mqtt out",
+        "z": "1dad0a92ae89740c",
+        "name": "LecturasAnalogicas",
+        "topic": "uaeh/erick/redes",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "6582f323d6ac2cd4",
+        "x": 470,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "b69d30be1dcbf591",
+        "type": "function",
+        "z": "1dad0a92ae89740c",
+        "name": "function 3",
+        "func": "let boton1 = {payload: msg.payload.btn1}\nlet boton2 = { payload: msg.payload.btn2 }\nlet pot1 = { payload: msg.payload.pot1 }\nlet pot2 = { payload: msg.payload.pot2 }\nreturn [boton1, boton2, pot1, pot2]",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 340,
+        "wires": [
+            [
+                "03f6839d2f0d790e",
+                "afe2f47b01edd434"
+            ],
+            [
+                "5cfd5bf68f588c9d",
+                "dccfe7bae7ee171e"
+            ],
+            [
+                "0edcc82c81a889db",
+                "d2f2404ee1a5474c"
+            ],
+            [
+                "942327326d9c6df1",
+                "a2a9cdea22dd9f00"
+            ]
+        ]
     },
     {
         "id": "3b27a60668097e32",
@@ -2331,13 +2368,101 @@
         ]
     },
     {
-        "id": "7b41f9746ac3273c",
-        "type": "serial out",
+        "id": "5cfd5bf68f588c9d",
+        "type": "ui_text",
         "z": "1dad0a92ae89740c",
-        "name": "",
-        "serial": "b1c65f463b3fbf0e",
-        "x": 780,
-        "y": 620,
+        "group": "2a57da97763dc503",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Pulsador 2",
+        "label": "Pulsador 2",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1050,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "03f6839d2f0d790e",
+        "type": "ui_text",
+        "z": "1dad0a92ae89740c",
+        "group": "2a57da97763dc503",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Pulsador 1",
+        "label": "Pulsador 1",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1070,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a2a9cdea22dd9f00",
+        "type": "ui_gauge",
+        "z": "1dad0a92ae89740c",
+        "name": "Manometro 2",
+        "group": "f00ef377b0ef7584",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Manometro 2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "400",
+        "seg2": "700",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "d2f2404ee1a5474c",
+        "type": "ui_gauge",
+        "z": "1dad0a92ae89740c",
+        "name": "Manometro 1",
+        "group": "f00ef377b0ef7584",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Manometro 1",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "400",
+        "seg2": "700",
+        "diff": false,
+        "className": "",
+        "x": 1050,
+        "y": 480,
         "wires": []
     },
     {
@@ -2356,70 +2481,14 @@
         ]
     },
     {
-        "id": "d0b6490bbd8cc46d",
-        "type": "debug",
+        "id": "7b41f9746ac3273c",
+        "type": "serial out",
         "z": "1dad0a92ae89740c",
-        "name": "debug 12",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 640,
-        "wires": []
-    },
-    {
-        "id": "752c2bd02398a5b1",
-        "type": "mqtt out",
-        "z": "1dad0a92ae89740c",
-        "name": "LecturasAnalogicas",
-        "topic": "uaeh/erick/redes",
-        "qos": "2",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "6582f323d6ac2cd4",
-        "x": 470,
-        "y": 800,
-        "wires": []
-    },
-    {
-        "id": "b69d30be1dcbf591",
-        "type": "function",
-        "z": "1dad0a92ae89740c",
-        "name": "function 3",
-        "func": "let boton1 = {payload: msg.payload.btn1}\nlet boton2 = { payload: msg.payload.btn2 }\nlet pot1 = { payload: msg.payload.pot1 }\nlet pot2 = { payload: msg.payload.pot2 }\nreturn [boton1, boton2, pot1, pot2]",
-        "outputs": 4,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
+        "name": "",
+        "serial": "b1c65f463b3fbf0e",
         "x": 780,
-        "y": 340,
-        "wires": [
-            [
-                "03f6839d2f0d790e",
-                "afe2f47b01edd434"
-            ],
-            [
-                "5cfd5bf68f588c9d",
-                "dccfe7bae7ee171e"
-            ],
-            [
-                "0edcc82c81a889db",
-                "d2f2404ee1a5474c"
-            ],
-            [
-                "942327326d9c6df1",
-                "a2a9cdea22dd9f00"
-            ]
-        ]
+        "y": 620,
+        "wires": []
     },
     {
         "id": "6e1e83f8716061a2",
@@ -2430,22 +2499,6 @@
         "x": 650,
         "y": 200,
         "wires": []
-    },
-    {
-        "id": "4bb9857b1a891df2",
-        "type": "telegram sender",
-        "z": "793358740fd58bcb",
-        "name": "Enviarmensaje",
-        "bot": "7d08b6630216f0d2",
-        "haserroroutput": false,
-        "outputs": 1,
-        "x": 1020,
-        "y": 680,
-        "wires": [
-            [
-                "164d20e074136df5"
-            ]
-        ]
     },
     {
         "id": "f1bb0446f769567c",
@@ -2517,37 +2570,6 @@
         "x": 580,
         "y": 360,
         "wires": []
-    },
-    {
-        "id": "5f631ed8bab3dcfb",
-        "type": "serial in",
-        "z": "793358740fd58bcb",
-        "name": "",
-        "serial": "b1c65f463b3fbf0e",
-        "x": 70,
-        "y": 380,
-        "wires": [
-            [
-                "ae310da1040083af"
-            ]
-        ]
-    },
-    {
-        "id": "72b9b236120c0cf7",
-        "type": "node-red-contrib-whatsapp-cmb-send-message",
-        "z": "793358740fd58bcb",
-        "name": "WatsAppBot",
-        "account": "452984d4cbdd47d7",
-        "text": "payload.content",
-        "inputtypemessage": "msg",
-        "rejectssl": false,
-        "x": 1010,
-        "y": 480,
-        "wires": [
-            [
-                "15c8d5bfc721a44b"
-            ]
-        ]
     },
     {
         "id": "15c8d5bfc721a44b",
@@ -2681,23 +2703,6 @@
         ]
     },
     {
-        "id": "e48cbe3df6305d40",
-        "type": "e-mail",
-        "z": "793358740fd58bcb",
-        "server": "smtp.gmail.com",
-        "port": "465",
-        "authtype": "BASIC",
-        "saslformat": true,
-        "token": "oauth2Response.access_token",
-        "secure": true,
-        "tls": true,
-        "name": "ve502295@uaeh.edu.mx",
-        "dname": "",
-        "x": 290,
-        "y": 960,
-        "wires": []
-    },
-    {
         "id": "d7423418b45c57f7",
         "type": "inject",
         "z": "793358740fd58bcb",
@@ -2727,17 +2732,67 @@
         ]
     },
     {
-        "id": "98220ae127761f87",
+        "id": "4bb9857b1a891df2",
         "type": "telegram sender",
-        "z": "c8d801bf08f5869b",
+        "z": "793358740fd58bcb",
         "name": "Enviarmensaje",
         "bot": "7d08b6630216f0d2",
         "haserroroutput": false,
         "outputs": 1,
-        "x": 1520,
-        "y": 540,
+        "x": 1020,
+        "y": 680,
         "wires": [
-            []
+            [
+                "164d20e074136df5"
+            ]
+        ]
+    },
+    {
+        "id": "72b9b236120c0cf7",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "793358740fd58bcb",
+        "name": "WatsAppBot",
+        "account": "452984d4cbdd47d7",
+        "text": "payload.content",
+        "inputtypemessage": "msg",
+        "rejectssl": false,
+        "x": 1010,
+        "y": 480,
+        "wires": [
+            [
+                "15c8d5bfc721a44b"
+            ]
+        ]
+    },
+    {
+        "id": "e48cbe3df6305d40",
+        "type": "e-mail",
+        "z": "793358740fd58bcb",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "ve502295@uaeh.edu.mx",
+        "dname": "",
+        "x": 290,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "5f631ed8bab3dcfb",
+        "type": "serial in",
+        "z": "793358740fd58bcb",
+        "name": "",
+        "serial": "b1c65f463b3fbf0e",
+        "x": 70,
+        "y": 380,
+        "wires": [
+            [
+                "ae310da1040083af"
+            ]
         ]
     },
     {
@@ -2758,21 +2813,6 @@
                 "98220ae127761f87",
                 "dfcc15fc9ba9f8fb"
             ]
-        ]
-    },
-    {
-        "id": "41266a586df70fcc",
-        "type": "node-red-contrib-whatsapp-cmb-send-message",
-        "z": "c8d801bf08f5869b",
-        "name": "WatsAppBot",
-        "account": "452984d4cbdd47d7",
-        "text": "payload.content",
-        "inputtypemessage": "msg",
-        "rejectssl": false,
-        "x": 1510,
-        "y": 420,
-        "wires": [
-            []
         ]
     },
     {
@@ -2850,58 +2890,6 @@
         ]
     },
     {
-        "id": "871150bf3d21fb25",
-        "type": "ui_audio",
-        "z": "c8d801bf08f5869b",
-        "name": "",
-        "group": "34fa86bcf389f3b9",
-        "voice": "Microsoft Sabina - Spanish (Mexico)",
-        "always": true,
-        "x": 1000,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "4823bc269d8b2e04",
-        "type": "ui_toast",
-        "z": "c8d801bf08f5869b",
-        "position": "top right",
-        "displayTime": "8",
-        "highlight": "",
-        "sendall": true,
-        "outputs": 0,
-        "ok": "OK",
-        "cancel": "",
-        "raw": false,
-        "className": "",
-        "topic": "",
-        "name": "",
-        "x": 1030,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "88478539255e41fc",
-        "type": "ui_text",
-        "z": "c8d801bf08f5869b",
-        "group": "d06eb2c6464ac712",
-        "order": 22,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 990,
-        "y": 800,
-        "wires": []
-    },
-    {
         "id": "a54b4419bae90f10",
         "type": "function",
         "z": "c8d801bf08f5869b",
@@ -2949,23 +2937,6 @@
         ]
     },
     {
-        "id": "d252ecf920bf1b98",
-        "type": "e-mail",
-        "z": "c8d801bf08f5869b",
-        "server": "smtp.gmail.com",
-        "port": "465",
-        "authtype": "BASIC",
-        "saslformat": true,
-        "token": "oauth2Response.access_token",
-        "secure": true,
-        "tls": true,
-        "name": "ve502295@uaeh.edu.mx",
-        "dname": "",
-        "x": 1550,
-        "y": 620,
-        "wires": []
-    },
-    {
         "id": "bdaf4f2a8416b3ed",
         "type": "function",
         "z": "c8d801bf08f5869b",
@@ -2981,21 +2952,6 @@
         "wires": [
             [
                 "d252ecf920bf1b98"
-            ]
-        ]
-    },
-    {
-        "id": "2164ddc7099e6c82",
-        "type": "serial in",
-        "z": "c8d801bf08f5869b",
-        "name": "",
-        "serial": "b1c65f463b3fbf0e",
-        "x": 790,
-        "y": 920,
-        "wires": [
-            [
-                "e5c32ed2e8e79979",
-                "fc25d5dd15267e59"
             ]
         ]
     },
@@ -3259,102 +3215,197 @@
         "wires": []
     },
     {
-        "id": "c777024ef37e973b",
-        "type": "ui_gauge",
+        "id": "e987300986a4eca7",
+        "type": "function",
         "z": "c8d801bf08f5869b",
-        "name": "Manometro 2",
-        "group": "f00ef377b0ef7584",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Manometro 2",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "1000",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "400",
-        "seg2": "700",
-        "diff": false,
-        "className": "",
-        "x": 410,
-        "y": 1040,
+        "name": "function 6",
+        "func": "let boton1 = {payload: msg.payload.btn1}\nlet boton2 = { payload: msg.payload.btn2 }\nlet pot1 = { payload: msg.payload.pot1 }\nlet pot2 = { payload: msg.payload.pot2 }\nreturn [boton1, boton2, pot1, pot2]",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 180,
+        "y": 700,
+        "wires": [
+            [
+                "1876eec27cb3dc4a",
+                "fb5b2c11421aafa3"
+            ],
+            [
+                "92d75d103b83d759",
+                "cd19e7441d324a94"
+            ],
+            [
+                "993cc092b9fae76d",
+                "8e341374520b939c"
+            ],
+            [
+                "78be4765ea750401",
+                "c777024ef37e973b"
+            ]
+        ]
+    },
+    {
+        "id": "f284ec90ed83087a",
+        "type": "debug",
+        "z": "c8d801bf08f5869b",
+        "name": "debug 37",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 240,
+        "y": 620,
         "wires": []
     },
     {
-        "id": "8e341374520b939c",
-        "type": "ui_gauge",
+        "id": "d35d4db4d697b29d",
+        "type": "json",
         "z": "c8d801bf08f5869b",
-        "name": "Manometro 1",
-        "group": "f00ef377b0ef7584",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "Manometro 1",
-        "label": "units",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "1000",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "400",
-        "seg2": "700",
-        "diff": false,
-        "className": "",
-        "x": 410,
-        "y": 940,
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": true,
+        "x": 110,
+        "y": 440,
+        "wires": [
+            [
+                "c6ad5cd5f9fdd575",
+                "e987300986a4eca7",
+                "f284ec90ed83087a"
+            ]
+        ]
+    },
+    {
+        "id": "36ec21e6f4d91d67",
+        "type": "debug",
+        "z": "c8d801bf08f5869b",
+        "name": "debug 38",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 420,
         "wires": []
     },
     {
-        "id": "92d75d103b83d759",
-        "type": "ui_text",
+        "id": "aeb9504bb7b19dbf",
+        "type": "debug",
         "z": "c8d801bf08f5869b",
-        "group": "2a57da97763dc503",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Pulsador 2",
-        "label": "Pulsador 2",
-        "format": "{{value}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 410,
-        "y": 820,
+        "name": "debug 39",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 120,
         "wires": []
     },
     {
-        "id": "1876eec27cb3dc4a",
-        "type": "ui_text",
+        "id": "6224d6cffc24d76e",
+        "type": "comment",
         "z": "c8d801bf08f5869b",
-        "group": "2a57da97763dc503",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "name": "Pulsador 1",
-        "label": "Pulsador 1",
-        "format": "{{value}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": true,
-        "font": "",
-        "fontSize": 16,
-        "color": "#000000",
-        "x": 430,
-        "y": 720,
+        "name": "Recibir JSON de datos",
+        "info": "",
+        "x": 160,
+        "y": 160,
         "wires": []
+    },
+    {
+        "id": "6606db51d29b7712",
+        "type": "comment",
+        "z": "c8d801bf08f5869b",
+        "name": "Enviar JSON de datos",
+        "info": "",
+        "x": 740,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "0b9d30037f335954",
+        "type": "comment",
+        "z": "c8d801bf08f5869b",
+        "name": "Recibir JSON con comandos y pasarlos a Arduino",
+        "info": "",
+        "x": 680,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "dfcc15fc9ba9f8fb",
+        "type": "debug",
+        "z": "c8d801bf08f5869b",
+        "name": "debug 28",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1500,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "934b680c9fbbaa07",
+        "type": "comment",
+        "z": "c8d801bf08f5869b",
+        "name": "Filtrar condicional para alertas",
+        "info": "",
+        "x": 300,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "65fc9c8304de31e6",
+        "type": "comment",
+        "z": "c8d801bf08f5869b",
+        "name": "Formatear mensaje adecuado a alertas",
+        "info": "",
+        "x": 410,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "98220ae127761f87",
+        "type": "telegram sender",
+        "z": "c8d801bf08f5869b",
+        "name": "Enviarmensaje",
+        "bot": "7d08b6630216f0d2",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1520,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41266a586df70fcc",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "c8d801bf08f5869b",
+        "name": "WatsAppBot",
+        "account": "452984d4cbdd47d7",
+        "text": "payload.content",
+        "inputtypemessage": "msg",
+        "rejectssl": false,
+        "x": 1510,
+        "y": 420,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "fee346d4b505ee46",
@@ -3595,34 +3646,184 @@
         ]
     },
     {
-        "id": "e987300986a4eca7",
-        "type": "function",
+        "id": "88478539255e41fc",
+        "type": "ui_text",
         "z": "c8d801bf08f5869b",
-        "name": "function 6",
-        "func": "let boton1 = {payload: msg.payload.btn1}\nlet boton2 = { payload: msg.payload.btn2 }\nlet pot1 = { payload: msg.payload.pot1 }\nlet pot2 = { payload: msg.payload.pot2 }\nreturn [boton1, boton2, pot1, pot2]",
-        "outputs": 4,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 180,
-        "y": 700,
+        "group": "d06eb2c6464ac712",
+        "order": 22,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 990,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "92d75d103b83d759",
+        "type": "ui_text",
+        "z": "c8d801bf08f5869b",
+        "group": "2a57da97763dc503",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Pulsador 2",
+        "label": "Pulsador 2",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 410,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "1876eec27cb3dc4a",
+        "type": "ui_text",
+        "z": "c8d801bf08f5869b",
+        "group": "2a57da97763dc503",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Pulsador 1",
+        "label": "Pulsador 1",
+        "format": "{{value}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 430,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "c777024ef37e973b",
+        "type": "ui_gauge",
+        "z": "c8d801bf08f5869b",
+        "name": "Manometro 2",
+        "group": "f00ef377b0ef7584",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Manometro 2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "400",
+        "seg2": "700",
+        "diff": false,
+        "className": "",
+        "x": 410,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "8e341374520b939c",
+        "type": "ui_gauge",
+        "z": "c8d801bf08f5869b",
+        "name": "Manometro 1",
+        "group": "f00ef377b0ef7584",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Manometro 1",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "400",
+        "seg2": "700",
+        "diff": false,
+        "className": "",
+        "x": 410,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "871150bf3d21fb25",
+        "type": "ui_audio",
+        "z": "c8d801bf08f5869b",
+        "name": "",
+        "group": "34fa86bcf389f3b9",
+        "voice": "Microsoft Sabina - Spanish (Mexico)",
+        "always": true,
+        "x": 1000,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "4823bc269d8b2e04",
+        "type": "ui_toast",
+        "z": "c8d801bf08f5869b",
+        "position": "top right",
+        "displayTime": "8",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 1030,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "d252ecf920bf1b98",
+        "type": "e-mail",
+        "z": "c8d801bf08f5869b",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "ve502295@uaeh.edu.mx",
+        "dname": "",
+        "x": 1550,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "2164ddc7099e6c82",
+        "type": "serial in",
+        "z": "c8d801bf08f5869b",
+        "name": "",
+        "serial": "b1c65f463b3fbf0e",
+        "x": 790,
+        "y": 920,
         "wires": [
             [
-                "1876eec27cb3dc4a",
-                "fb5b2c11421aafa3"
-            ],
-            [
-                "92d75d103b83d759",
-                "cd19e7441d324a94"
-            ],
-            [
-                "993cc092b9fae76d",
-                "8e341374520b939c"
-            ],
-            [
-                "78be4765ea750401",
-                "c777024ef37e973b"
+                "e5c32ed2e8e79979",
+                "fc25d5dd15267e59"
             ]
         ]
     },
@@ -3637,10 +3838,32 @@
         "wires": []
     },
     {
-        "id": "f284ec90ed83087a",
+        "id": "ca9197134e8215cf",
+        "type": "exec",
+        "z": "e0db045ba8844b5f",
+        "command": "ssh erick@172.17.0.1 grep \"^PRETTY_NAME=\" /etc/os-release",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "10",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 630,
+        "y": 200,
+        "wires": [
+            [
+                "b442076eb899a172"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b442076eb899a172",
         "type": "debug",
-        "z": "c8d801bf08f5869b",
-        "name": "debug 37",
+        "z": "e0db045ba8844b5f",
+        "name": "debug 3",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -3648,95 +3871,245 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 240,
-        "y": 620,
+        "x": 1100,
+        "y": 260,
         "wires": []
     },
     {
-        "id": "d35d4db4d697b29d",
-        "type": "json",
-        "z": "c8d801bf08f5869b",
+        "id": "354ef4bd2db89206",
+        "type": "exec",
+        "z": "e0db045ba8844b5f",
+        "command": "ssh erick@172.17.0.1 gpio pwm 2 ",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "4",
+        "winHide": false,
+        "oldrc": false,
         "name": "",
-        "property": "payload",
-        "action": "obj",
-        "pretty": true,
-        "x": 110,
-        "y": 440,
+        "x": 840,
+        "y": 320,
+        "wires": [
+            [],
+            [
+                "b442076eb899a172"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "406bb9fc886811c3",
+        "type": "exec",
+        "z": "e0db045ba8844b5f",
+        "command": "ssh pi@172.17.0.1 sudo python3 /home/pi/IOTstack/pyhton-sensor//lcd16x2/lcd.py",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "4",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 590,
+        "y": 860,
         "wires": [
             [
-                "c6ad5cd5f9fdd575",
-                "e987300986a4eca7",
-                "f284ec90ed83087a"
+                "b442076eb899a172"
+            ],
+            [
+                "b442076eb899a172"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "779091bc92120b27",
+        "type": "inject",
+        "z": "e0db045ba8844b5f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "-mA IoT01 -mB UAEH",
+        "payloadType": "str",
+        "x": 140,
+        "y": 860,
+        "wires": [
+            [
+                "406bb9fc886811c3"
             ]
         ]
     },
     {
-        "id": "36ec21e6f4d91d67",
-        "type": "debug",
-        "z": "c8d801bf08f5869b",
-        "name": "debug 38",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 520,
-        "y": 420,
-        "wires": []
+        "id": "63dc58511788803e",
+        "type": "inject",
+        "z": "e0db045ba8844b5f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 220,
+        "wires": [
+            [
+                "ca9197134e8215cf",
+                "9a8a7489e678fb82"
+            ]
+        ]
     },
     {
-        "id": "aeb9504bb7b19dbf",
-        "type": "debug",
-        "z": "c8d801bf08f5869b",
-        "name": "debug 39",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 120,
-        "wires": []
+        "id": "1d6a21c6a6ca8055",
+        "type": "exec",
+        "z": "e0db045ba8844b5f",
+        "command": "ssh pi@172.17.0.1 cd /home/pi/IOTstack/pyhton-sensor/DHT11/",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "4",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 550,
+        "y": 960,
+        "wires": [
+            [],
+            [],
+            []
+        ]
     },
     {
-        "id": "6224d6cffc24d76e",
+        "id": "019dc14e96483ee8",
+        "type": "inject",
+        "z": "e0db045ba8844b5f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "| python3 dht11.py",
+        "payloadType": "str",
+        "x": 210,
+        "y": 980,
+        "wires": [
+            [
+                "1d6a21c6a6ca8055"
+            ]
+        ]
+    },
+    {
+        "id": "9a8a7489e678fb82",
+        "type": "exec",
+        "z": "e0db045ba8844b5f",
+        "command": "grep  \"^PRETTY_NAME=\" /etc/os-release",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 640,
+        "y": 80,
+        "wires": [
+            [
+                "b442076eb899a172"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9103d649da9daf84",
         "type": "comment",
-        "z": "c8d801bf08f5869b",
-        "name": "Recibir JSON de datos",
+        "z": "e0db045ba8844b5f",
+        "name": "dentro de container Node-Red",
         "info": "",
-        "x": 160,
+        "x": 530,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "98e1dfd0ca82bfbf",
+        "type": "comment",
+        "z": "e0db045ba8844b5f",
+        "name": "Desde OrangeOS(SO anfitrion)",
+        "info": "",
+        "x": 530,
         "y": 160,
         "wires": []
     },
     {
-        "id": "6606db51d29b7712",
-        "type": "comment",
-        "z": "c8d801bf08f5869b",
-        "name": "Enviar JSON de datos",
-        "info": "",
-        "x": 740,
-        "y": 880,
-        "wires": []
+        "id": "8a9c18168b18edbf",
+        "type": "range",
+        "z": "e0db045ba8844b5f",
+        "minin": "0",
+        "maxin": "180",
+        "minout": "70",
+        "maxout": "525",
+        "action": "scale",
+        "round": true,
+        "property": "payload",
+        "name": "Mapeo PWM",
+        "x": 510,
+        "y": 320,
+        "wires": [
+            [
+                "354ef4bd2db89206"
+            ]
+        ]
     },
     {
-        "id": "0b9d30037f335954",
-        "type": "comment",
-        "z": "c8d801bf08f5869b",
-        "name": "Recibir JSON con comandos y pasarlos a Arduino",
-        "info": "",
-        "x": 680,
-        "y": 220,
-        "wires": []
+        "id": "d67ce624cfde7ac1",
+        "type": "exec",
+        "z": "e0db045ba8844b5f",
+        "command": "ssh erick@172.17.0.1 python3 servo.py normal",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 720,
+        "y": 480,
+        "wires": [
+            [
+                "50e17867c56d2765"
+            ],
+            [],
+            []
+        ]
     },
     {
-        "id": "dfcc15fc9ba9f8fb",
+        "id": "50e17867c56d2765",
         "type": "debug",
-        "z": "c8d801bf08f5869b",
-        "name": "debug 28",
+        "z": "e0db045ba8844b5f",
+        "name": "debug 40",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -3744,28 +4117,224 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1500,
+        "x": 1080,
         "y": 480,
         "wires": []
     },
     {
-        "id": "934b680c9fbbaa07",
-        "type": "comment",
-        "z": "c8d801bf08f5869b",
-        "name": "Filtrar condicional para alertas",
-        "info": "",
-        "x": 300,
-        "y": 420,
+        "id": "6910db2d1c8eb61b",
+        "type": "exec",
+        "z": "e0db045ba8844b5f",
+        "command": "ssh erick@172.17.0.1 gpio write 4 ",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 660,
+        "y": 580,
+        "wires": [
+            [],
+            [
+                "50e17867c56d2765"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e2d9959a8ae68da4",
+        "type": "exec",
+        "z": "e0db045ba8844b5f",
+        "command": "ssh erick@172.17.0.1 gpio write 3 ",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 660,
+        "y": 660,
+        "wires": [
+            [],
+            [
+                "50e17867c56d2765"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "d7834afef0bee680",
+        "type": "ui_switch",
+        "z": "e0db045ba8844b5f",
+        "name": "",
+        "label": "LED",
+        "tooltip": "",
+        "group": "1b9851c273eca0cf",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 290,
+        "y": 580,
+        "wires": [
+            [
+                "6910db2d1c8eb61b"
+            ]
+        ]
+    },
+    {
+        "id": "6b334d2e9d8bccbc",
+        "type": "ui_slider",
+        "z": "e0db045ba8844b5f",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "78ac2354e82ef46b",
+        "order": 5,
+        "width": "6",
+        "height": "5",
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "180",
+        "step": 1,
+        "className": "",
+        "x": 250,
+        "y": 320,
+        "wires": [
+            [
+                "8a9c18168b18edbf",
+                "9c3188db78e04c00"
+            ]
+        ]
+    },
+    {
+        "id": "74d1b76018914ca9",
+        "type": "ui_switch",
+        "z": "e0db045ba8844b5f",
+        "name": "",
+        "label": "RELE",
+        "tooltip": "",
+        "group": "1b9851c273eca0cf",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 290,
+        "y": 640,
+        "wires": [
+            [
+                "e2d9959a8ae68da4"
+            ]
+        ]
+    },
+    {
+        "id": "9c3188db78e04c00",
+        "type": "ui_gauge",
+        "z": "e0db045ba8844b5f",
+        "name": "",
+        "group": "78ac2354e82ef46b",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Posicion de servo",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "180",
+        "colors": [
+            "#b3009b",
+            "#0039e6",
+            "#65cb3a"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 530,
+        "y": 380,
         "wires": []
     },
     {
-        "id": "65fc9c8304de31e6",
-        "type": "comment",
-        "z": "c8d801bf08f5869b",
-        "name": "Formatear mensaje adecuado a alertas",
-        "info": "",
-        "x": 410,
-        "y": 600,
+        "id": "ade9e907ceca3c4f",
+        "type": "ui_button",
+        "z": "e0db045ba8844b5f",
+        "name": "",
+        "group": "78ac2354e82ef46b",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Ejecutar tour",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "50 80 90 120 180 0 180",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 310,
+        "y": 440,
+        "wires": [
+            [
+                "d67ce624cfde7ac1",
+                "7d1f87fcd0e68553"
+            ]
+        ]
+    },
+    {
+        "id": "7d1f87fcd0e68553",
+        "type": "ui_toast",
+        "z": "e0db045ba8844b5f",
+        "position": "top left",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Ejecutando tour",
+        "name": "",
+        "x": 430,
+        "y": 520,
         "wires": []
     }
 ]
