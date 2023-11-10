@@ -88,6 +88,14 @@
         "env": []
     },
     {
+        "id": "877dfe244e6ec003",
+        "type": "tab",
+        "label": "Proyecto FInal_Fundamentos_IoT",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "6582f323d6ac2cd4",
         "type": "mqtt-broker",
         "name": "Hive",
@@ -373,6 +381,51 @@
         "width": "6",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "298866d4511f9655",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mosquitto",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "77bafa81aaf4fb96",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://influxdb:8086",
+        "rejectUnauthorized": true
     },
     {
         "id": "eaf2df4aed6a835a",
@@ -916,6 +969,7 @@
         "name": "DescomponerJSON",
         "func": "let boton1 = {payload: msg.payload.btn1}\nlet boton2 = { payload: msg.payload.btn2 }\nlet pot1 = { payload: msg.payload.pot1 }\nlet pot2 = { payload: msg.payload.pot2 }\nreturn [boton1, boton2, pot1, pot2];",
         "outputs": 4,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -3864,7 +3918,7 @@
         "type": "debug",
         "z": "e0db045ba8844b5f",
         "name": "debug 3",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3898,55 +3952,6 @@
         ]
     },
     {
-        "id": "406bb9fc886811c3",
-        "type": "exec",
-        "z": "e0db045ba8844b5f",
-        "command": "ssh pi@172.17.0.1 sudo python3 /home/pi/IOTstack/pyhton-sensor//lcd16x2/lcd.py",
-        "addpay": "payload",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "4",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 590,
-        "y": 860,
-        "wires": [
-            [
-                "b442076eb899a172"
-            ],
-            [
-                "b442076eb899a172"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "779091bc92120b27",
-        "type": "inject",
-        "z": "e0db045ba8844b5f",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "-mA IoT01 -mB UAEH",
-        "payloadType": "str",
-        "x": 140,
-        "y": 860,
-        "wires": [
-            [
-                "406bb9fc886811c3"
-            ]
-        ]
-    },
-    {
         "id": "63dc58511788803e",
         "type": "inject",
         "z": "e0db045ba8844b5f",
@@ -3973,51 +3978,6 @@
             [
                 "ca9197134e8215cf",
                 "9a8a7489e678fb82"
-            ]
-        ]
-    },
-    {
-        "id": "1d6a21c6a6ca8055",
-        "type": "exec",
-        "z": "e0db045ba8844b5f",
-        "command": "ssh pi@172.17.0.1 cd /home/pi/IOTstack/pyhton-sensor/DHT11/",
-        "addpay": "payload",
-        "append": "",
-        "useSpawn": "false",
-        "timer": "4",
-        "winHide": false,
-        "oldrc": false,
-        "name": "",
-        "x": 550,
-        "y": 960,
-        "wires": [
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "019dc14e96483ee8",
-        "type": "inject",
-        "z": "e0db045ba8844b5f",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "| python3 dht11.py",
-        "payloadType": "str",
-        "x": 210,
-        "y": 980,
-        "wires": [
-            [
-                "1d6a21c6a6ca8055"
             ]
         ]
     },
@@ -4087,7 +4047,7 @@
         "id": "d67ce624cfde7ac1",
         "type": "exec",
         "z": "e0db045ba8844b5f",
-        "command": "ssh erick@172.17.0.1 python3 servo.py normal",
+        "command": "ssh erick@172.17.0.1 python3 servo.py instantaneo",
         "addpay": "payload",
         "append": "",
         "useSpawn": "false",
@@ -4095,7 +4055,7 @@
         "winHide": false,
         "oldrc": false,
         "name": "",
-        "x": 720,
+        "x": 730,
         "y": 480,
         "wires": [
             [
@@ -4305,7 +4265,7 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "50 80 90 120 180 0 180",
+        "payload": "50 80 90 120 180 0 180 0 180 90 0 180 0 180",
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
@@ -4335,6 +4295,373 @@
         "name": "",
         "x": 430,
         "y": 520,
+        "wires": []
+    },
+    {
+        "id": "c57757dd15475be6",
+        "type": "thingspeak42",
+        "z": "877dfe244e6ec003",
+        "name": "",
+        "delay": "5",
+        "topic1": "sensores/humedad",
+        "topic2": "sensores/temperatura",
+        "topic3": "actuadores/ventilador",
+        "topic4": "",
+        "topic5": "",
+        "topic6": "",
+        "topic7": "",
+        "topic8": "",
+        "endpoint": "https://thingspeak.com",
+        "x": 610,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "fb5df83636a56014",
+        "type": "mqtt in",
+        "z": "877dfe244e6ec003",
+        "name": "",
+        "topic": "iot/UAEH/ErickVega/Estudio/Sensores",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "298866d4511f9655",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 410,
+        "y": 320,
+        "wires": [
+            [
+                "30e5c5c6e2e85d41"
+            ]
+        ]
+    },
+    {
+        "id": "30e5c5c6e2e85d41",
+        "type": "json",
+        "z": "877dfe244e6ec003",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 650,
+        "y": 320,
+        "wires": [
+            [
+                "e3cadbc72b1ab74a",
+                "9cc862c9fab78dfe",
+                "fb3502368b1dd9c9",
+                "7ce316f6a689c989"
+            ]
+        ]
+    },
+    {
+        "id": "09758aa83274eb31",
+        "type": "mqtt out",
+        "z": "877dfe244e6ec003",
+        "name": "",
+        "topic": "sensores/humedad",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "298866d4511f9655",
+        "x": 1070,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b5bfc729e8749187",
+        "type": "mqtt in",
+        "z": "877dfe244e6ec003",
+        "name": "",
+        "topic": "sensores/humedad",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "298866d4511f9655",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 370,
+        "y": 720,
+        "wires": [
+            [
+                "c57757dd15475be6"
+            ]
+        ]
+    },
+    {
+        "id": "e3cadbc72b1ab74a",
+        "type": "function",
+        "z": "877dfe244e6ec003",
+        "name": "Extraer Humedad",
+        "func": "let humedad = {payload: msg.payload.datos.humedad};\nreturn [humedad];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 260,
+        "wires": [
+            [
+                "09758aa83274eb31",
+                "c3e3490106dc072b"
+            ]
+        ]
+    },
+    {
+        "id": "9cc862c9fab78dfe",
+        "type": "function",
+        "z": "877dfe244e6ec003",
+        "name": "Extraer Temperatura",
+        "func": "let temperatura = {payload: msg.payload.datos.temperatura};\nreturn [temperatura];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 340,
+        "wires": [
+            [
+                "53e7c18876d544d9",
+                "9e4b03843b8cc518",
+                "bbfa486576fd45ca"
+            ]
+        ]
+    },
+    {
+        "id": "53e7c18876d544d9",
+        "type": "mqtt out",
+        "z": "877dfe244e6ec003",
+        "name": "",
+        "topic": "sensores/temperatura",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "298866d4511f9655",
+        "x": 1140,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "9ae36733f00e9bcf",
+        "type": "mqtt in",
+        "z": "877dfe244e6ec003",
+        "name": "",
+        "topic": "sensores/temperatura",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "298866d4511f9655",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 380,
+        "y": 660,
+        "wires": [
+            [
+                "c57757dd15475be6"
+            ]
+        ]
+    },
+    {
+        "id": "fb3502368b1dd9c9",
+        "type": "debug",
+        "z": "877dfe244e6ec003",
+        "name": "debug 41",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "9e4b03843b8cc518",
+        "type": "influxdb out",
+        "z": "877dfe244e6ec003",
+        "influxdb": "77bafa81aaf4fb96",
+        "name": "",
+        "measurement": "temperatura",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "CybersysTech",
+        "bucket": "Cahuitl",
+        "x": 1170,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "c3e3490106dc072b",
+        "type": "influxdb out",
+        "z": "877dfe244e6ec003",
+        "influxdb": "77bafa81aaf4fb96",
+        "name": "",
+        "measurement": "humedad",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "s",
+        "retentionPolicyV18Flux": "",
+        "org": "CybersysTech",
+        "bucket": "Cahuitl",
+        "x": 1180,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "7f2fa66c8c92cb9e",
+        "type": "exec",
+        "z": "877dfe244e6ec003",
+        "command": "ssh erick@172.17.0.1 python3 configPines.py",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "10",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 460,
+        "y": 100,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "72a65edbc9f0f21b",
+        "type": "inject",
+        "z": "877dfe244e6ec003",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "7f2fa66c8c92cb9e"
+            ]
+        ]
+    },
+    {
+        "id": "bbfa486576fd45ca",
+        "type": "debug",
+        "z": "877dfe244e6ec003",
+        "name": "debug 42",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1360,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "9cc809f3a02df88b",
+        "type": "worldmap",
+        "z": "877dfe244e6ec003",
+        "name": "Posicion de Sensor",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSMC",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "true",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "true",
+        "showruler": "true",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN",
+        "maplist": "OSMC,EsriC,EsriS,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 1070,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "7ce316f6a689c989",
+        "type": "function",
+        "z": "877dfe244e6ec003",
+        "name": "Extraer GPS",
+        "func": "let sensor = {payload:msg.payload.sensor};\nlet latitud = {payload:msg.payload.datos.ubicacion.latitud};\nlet longitud = {payload:msg.payload.datos.ubicacion.longitud};\nmsg.payload = {\"name\":sensor.payload, \"lat\":latitud.payload, \"lon\":longitud.payload}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 480,
+        "wires": [
+            [
+                "9cc809f3a02df88b",
+                "9eaed945c35597b7"
+            ]
+        ]
+    },
+    {
+        "id": "9eaed945c35597b7",
+        "type": "debug",
+        "z": "877dfe244e6ec003",
+        "name": "debug 43",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 580,
         "wires": []
     }
 ]
